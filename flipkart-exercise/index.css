@@ -1,0 +1,338 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color:rgb(233, 233, 233);
+}
+a{
+  text-decoration: none;   
+}
+
+.nav-bar a:hover, .adv-div:hover, .deals-body-div a:hover, .second-main-body a:hover {
+    background-color: rgb(240, 240, 240);
+    scale: 1.1;
+    transition: 300ms;
+    border: none;
+    border-radius: 3px;
+}
+.header-bar{
+    background-color: rgb(40, 127, 240);
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    height: 70%;
+}
+.search-bar{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+} 
+.search-bar input{
+    height: 70%;
+    width:100%;
+    padding-left: 7px;
+    padding-right: 50px;
+    outline: none;
+    border-radius: 3px;
+    border:none
+}
+.search-icon{
+    height: 50%;
+    position: absolute;
+    right: 10px;
+}
+.login-button{
+    height: 55%;
+    width: 7%;
+    background-color: white;
+    color: rgb(40, 127, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.more-menu{
+    margin-left: 3%;
+    color: white;
+    font-weight: bold;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.more-options{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 25px;
+    display: none;
+    z-index: 5;
+    background-color: white ;
+    font-size: medium;
+    border-left: 1px solid rgb(236, 234, 234);
+    border-right: 1px solid rgb(236, 234, 234);
+}
+.more-options a{
+    color: black;
+    padding: 15px 45px;
+    text-decoration: none;
+    display: block;
+    border-bottom:1px solid rgb(236, 234, 234);
+}
+.more-options a:hover{
+    background-color: rgb(209, 206, 206);
+}
+.more-menu:hover .more-options{
+    display: block;
+}
+.more-menu:hover .down-img {
+    rotate: 180deg;
+}
+.down-img{
+    margin-left: 5px;
+    height:70%;
+    width: 70%;
+    transition: 300ms;
+}
+.cart{
+    margin-left: 3%;
+    color: white;
+    font-weight: bold;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-img{
+    margin-right: 5px;
+    height: 80%;
+    width: 80%;
+}
+.nav-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+    height: 8rem;
+    border-top: solid rgb(214, 214, 214) 1.5px ;
+    border-bottom: solid rgb(214, 214, 214) 1.5px ;
+    overflow: auto;
+    background-color: white;
+}
+@media (max-width:1054px){
+    .nav-bar{
+        justify-content: start;
+        padding-left: 15px;
+        overflow: hidden;
+    }
+    .nav-bar:hover{
+        overflow: auto;
+    }
+    .nav-item{  
+        flex-shrink: 0;
+    }
+}
+.nav-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: black;
+    
+}
+.nav-img{
+    height: 65px;
+}
+.nav-item img, .music-img, .item-img{
+    mix-blend-mode: multiply; 
+}
+.main{  
+    margin: 1% 5% 1% 5%;
+    display: flex;
+    flex-direction: column ;
+    gap: 9px;
+}
+.deals-div, .second-main-div{
+    display: flex;
+    flex-direction: column;
+    gap:1px;
+    min-width: 0;
+    flex-grow: 1;
+}
+.deals-header-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    height: 55px;
+    padding-right: 15px ;
+    border: solid 1px (142, 139, 139, 0.095);
+    background-color: white;
+}
+.head-time-container{
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+}
+.time-div{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left:30px;
+    gap: 5px;
+}
+.time-img{
+    height: 50%;
+}
+@media (max-width:840px){
+    .head-time-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        height: 100%;
+        gap: 0px;
+
+    }
+    .deals-header-div{
+        height: 90px;
+    }
+    .time-div{
+        height: 50%;
+        margin-left: 0;
+    }
+    .header-bar{
+        flex-wrap: wrap;
+    }
+    
+}
+.view-all-button{
+    background-color: rgb(40, 127, 240);
+    height: 70%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: medium;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: solid 1px (142, 139, 139, 0.095);
+    border-radius: 3px;
+    transform: 200ms;
+}
+.view-all-button:hover, .login-button:hover{
+    background-color: rgb(169, 169, 169);
+    color: white;
+}
+.first-main-div{
+    display: flex;
+    gap: 5px;
+}
+.adv-div{
+    border: 1px solid (142, 139, 139, 0.095);
+    height: 324px;
+    width: 210px;
+    padding: 3px;
+    margin-left: auto;
+    background-color: white;
+    flex-shrink: 0;
+}
+.adv-img{
+    height: 100%;
+    width: 100%;
+}   
+.deals-body-div{
+    border: solid 1px rgba(142, 139, 139, 0.095);
+    background-color: white;
+}
+.deals-items-container{
+    height: 100%;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+    overflow: hidden;
+}
+.deals-items-container:hover{
+    overflow: auto;
+}
+.deals-item-details, .music-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3px;
+    font-size: small;
+    
+}
+.deals-item, .music-item{
+    height: 231px; 
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+.item-img, .music-img{
+    height: 90%;
+    width: 100%;
+}
+.deals-img-container, .music-img-container{
+    height: 75%;
+}
+.item-name{
+    font-weight: bold;
+    color: black;
+}
+.item-discount{
+    color:green;
+}
+.item-tag{
+    color: rgb(88, 88, 88);
+}
+.second-main-header{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding-right: 15px ;
+    border: solid 1px (142, 139, 139, 0.095);
+    background-color: white;
+    padding-left: 15px;
+}
+.second-main-body{
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+    background-color: white;
+    border: solid 1px rgba(142, 139, 139, 0.095);
+    overflow: hidden;
+}
+.second-main-body:hover{
+    overflow: auto;
+}
+
